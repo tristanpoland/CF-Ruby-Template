@@ -17,6 +17,3 @@ env: production
 
 # Session secret (generate a secure random string)
 session-secret: replace-with-secure-random-string
-
-# Database service name
-db-service-name: 

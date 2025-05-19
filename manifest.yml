@@ -10,8 +10,6 @@ applications:
   env:
     RACK_ENV: ((env))
     SESSION_SECRET: ((session-secret))
-  services:
-    - ((db-service-name))  # Replace with your actual service instance name if you have one
   health-check-type: http
   health-check-http-endpoint: /health
   timeout: 180
