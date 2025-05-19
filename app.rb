@@ -150,6 +150,8 @@ end
 
 # Start the server if this file is executed directly
 if __FILE__ == $0
-  puts "Starting server at http://localhost:4567"
+port = ENV['PORT'] || 4567
+puts "Starting server at http://localhost:#{port}"
+Sinatra::Application.run! port: port
   Sinatra::Application.run!
 end
