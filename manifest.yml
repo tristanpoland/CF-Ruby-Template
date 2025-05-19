@@ -10,6 +10,3 @@ applications:
   env:
     RACK_ENV: ((env))
     SESSION_SECRET: ((session-secret))
-  health-check-type: http
-  health-check-http-endpoint: /health
-  timeout: 180
