@@ -151,5 +151,5 @@ end
 # Start the server if this file is executed directly
 if __FILE__ == $0
   puts "Starting server at http://localhost:4567"
-  run!
+  Sinatra::Application.run!
 end
