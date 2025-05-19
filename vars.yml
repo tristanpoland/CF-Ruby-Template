@@ -12,9 +12,6 @@ memory: 256M
 # Number of instances
 instances: 1
 
-# Application route/domain
-app-domain: your-cf-domain.com
-
 # Environment
 env: production
 
@@ -22,4 +19,4 @@ env: production
 session-secret: replace-with-secure-random-string
 
 # Database service name
-db-service-name: my-db-service
+db-service-name: 
