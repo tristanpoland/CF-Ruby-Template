@@ -49,3 +49,4 @@ Thumbs.db
 .ruby-gemset
 .rbenv-version
 .rvmrc
+output.glue
