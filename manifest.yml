@@ -1,0 +1,19 @@
+---
+applications:
+- name: ((app-name))
+  memory: ((memory))
+  instances: ((instances))
+  buildpacks:
+    - ruby_buildpack
+  path: .
+  command: bundle exec ruby app.rb -p $PORT
+  env:
+    RACK_ENV: ((env))
+    SESSION_SECRET: ((session-secret))
+  services:
+    - ((db-service-name))  # Replace with your actual service instance name if you have one
+  routes:
+    - route: ((app-name)).((app-domain))  # Replace with your actual CF domain
+  health-check-type: http
+  health-check-http-endpoint: /health
+  timeout: 180

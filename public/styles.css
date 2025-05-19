@@ -1,0 +1,131 @@
+/* Custom styles for Ruby Test App */
+
+:root {
+  --primary-color: #3498db;
+  --secondary-color: #2c3e50;
+  --success-color: #2ecc71;
+  --danger-color: #e74c3c;
+  --warning-color: #f39c12;
+  --info-color: #1abc9c;
+  --light-color: #f8f9fa;
+  --dark-color: #343a40;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f5f8fa;
+  padding-bottom: 60px; /* Space for footer */
+}
+
+/* Custom navigation bar styling */
+.navbar-brand {
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+/* Custom card styling */
+.card {
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+/* Task status styling */
+.completed {
+  text-decoration: line-through;
+  color: #6c757d;
+}
+
+/* Button styling */
+.btn {
+  border-radius: 4px;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  transition: all 0.2s ease;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+  background-color: #2980b9;
+  border-color: #2980b9;
+}
+
+.btn-outline-success:hover {
+  background-color: var(--success-color);
+  border-color: var(--success-color);
+}
+
+.btn-outline-danger:hover {
+  background-color: var(--danger-color);
+  border-color: var(--danger-color);
+}
+
+/* Form styling */
+.form-control {
+  border-radius: 4px;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #ddd;
+}
+
+.form-control:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 0.2rem rgba(52, 152, 219, 0.25);
+}
+
+/* Footer styling */
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: var(--light-color);
+  border-top: 1px solid #e7e7e7;
+  padding: 1rem 0;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .container {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+  
+  .card {
+    margin-bottom: 20px;
+  }
+  
+  .btn {
+    padding: 0.375rem 0.75rem;
+  }
+}
+
+/* Loading animation */
+.loader {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid var(--primary-color);
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  animation: spin 1s linear infinite;
+  margin: 20px auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

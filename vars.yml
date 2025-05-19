@@ -1,0 +1,25 @@
+---
+# Deployment environment variables (to be set in the CF deployment)
+# If using this file with cf push, use the '--vars-file' option:
+# cf push --vars-file vars.yml
+
+# Application name
+app-name: ruby-test-app
+
+# Memory allocation
+memory: 256M
+
+# Number of instances
+instances: 1
+
+# Application route/domain
+app-domain: your-cf-domain.com
+
+# Environment
+env: production
+
+# Session secret (generate a secure random string)
+session-secret: replace-with-secure-random-string
+
+# Database service name
+db-service-name: my-db-service

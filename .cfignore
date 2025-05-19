@@ -1,4 +1,6 @@
-# Ruby-related
+# CF ignore file - similar to .gitignore but for Cloud Foundry
+
+# Ruby specific
 *.gem
 *.rbc
 /.config
@@ -11,7 +13,7 @@
 /test/version_tmp/
 /tmp/
 
-# Database files
+# Database files - CF will use a service for persistence
 *.db
 *.sqlite3
 *.sqlite3-journal
@@ -21,19 +23,27 @@
 .env.local
 .env.development
 .env.test
-.env.production
 .bundle/
 
-# Logs
+# Logs - CF handles logs
 /log/*
 !/log/.keep
 /tmp/logs/*
 !/tmp/logs/.keep
 
-# Runtime data
+# Development specific
 /.sass-cache
+/.vscode/
+/.idea/
+.byebug_history
+/vendor/bundle
 /public/system
 /public/assets
+
+# Git artifacts
+.git
+.gitignore
+.github/
 
 # OS generated files
 .DS_Store
@@ -43,6 +53,11 @@
 .Trashes
 ehthumbs.db
 Thumbs.db
+
+# Local deployment artifacts
+manifest.local.yml
+manifest.dev.yml
+.cf/
 
 # Ruby version managers
 .ruby-version

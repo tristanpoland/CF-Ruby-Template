@@ -1,0 +1,17 @@
+---
+development:
+  adapter: sqlite3
+  database: test_app.db
+  timeout: 5000
+
+test:
+  adapter: sqlite3
+  database: test_app_test.db
+  timeout: 5000
+
+production:
+  # The production adapter will be determined by VCAP_SERVICES
+  # This is a fallback configuration if no service is bound
+  adapter: sqlite3
+  database: test_app_production.db
+  timeout: 5000
